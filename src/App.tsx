@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { useSelector } from 'react-redux';
 import AppRoutes from './routes/AppRoutes';
@@ -14,7 +13,7 @@ function App() {
 
   return (
     <div className='App'>
-      <div className='fixed top-0 right-0'>
+      <div className='fixed top-0 right-0 z-50'>
         <ThemeToggle />
       </div>
 
