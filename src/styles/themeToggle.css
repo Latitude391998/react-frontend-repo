@@ -1,7 +1,5 @@
 .theme-toggle-btn {
   padding: 5px 16px;
-  border-radius: 6px;
-  border: 1px solid var(--border-color);
   background-color: var(--card-bg);
   color: var(--text-color);
   cursor: pointer;

@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className='App'>
-      <div className='fixed top-0 right-0 z-50'>
+      <div className='fixed bottom-3 right-3 z-50'>
         <ThemeToggle />
       </div>
 

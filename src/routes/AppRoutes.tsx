@@ -9,9 +9,8 @@ import HomePage from '../pages/Home';
 import AboutMe from '../pages/AboutMe';
 import PublicLayout from '../layouts/PublicLayout';
 import ContactMe from '../pages/ContactMe';
-
-// Dummy components (replace later)
-const Dashboard = () => <div>Dashboard</div>;
+import Dashboard from '../pages/Dashboard';
+import PrivateLayout from '../layouts/PrivateLayout';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -58,19 +57,25 @@ const AppRoutes: React.FC = () => {
         />
       </Route>
 
-      {/* Open route */}
-      <Route path='/' element={<HomePage />} />
-      <Route path='/about-me' element={<AboutMe />} />
-
-      {/* Protected Routes */}
-      <Route
-        path='/dashboard'
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-      />
+      <Route element={<PrivateLayout />}>
+        {/* Protected Routes */}
+        <Route
+          path='/dashboard'
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        {/* <Route
+          path='/tab2'
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        /> */}
+      </Route>
     </Routes>
   );
 };
